@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header starts -->
+    <header>
+      <div class="container">
+        <div class="row align-items-center py-3">
+          <div class="col">
+            <p class="fs-4 fw-bold">Where in the world</p>
+          </div>
+          <div class="col text-end">
+            <button class="dark-btn">
+              <i class="fa-regular fa-moon me-2"></i>Dark Mode
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header ends -->
+    <!-- nav starts  -->
+    <nav class="mt-5 main-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="search-cont">
+              <label for="search"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></label>
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search for a country..."
+                autocomplete="off"
+              />
+              <ul class="suggestion-ul">
+                <!-- <li class="suggestion-li">Bangladesh</li>
+                <li class="suggestion-li">India</li>
+                <li class="suggestion-li">Nepal</li>
+                <li class="suggestion-li">Pakistan</li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 offset-md-4 text-end">
+            <select
+              name="select-region"
+              id="select-region"
+              class="select-region"
+            >
+              <option selected disabled value="Filter-by-region">
+                Filter by region
+              </option>
+              <option value="All">All</option>
+              <option value="Africa">Africa</option>
+              <option value="America">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="Oceania">Oceania</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="mt-5 hide expand-view-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <button class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- nav ends  -->
+    <!-- main starts  -->
+    <main class="">
+      <div class="container">
+        <!-- country view starts  -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 country-view">
+          <!-- card starts  -->
+          <!-- <div class="col gy-5">
+            <div class="card-cont">
+              <img
+                src="https://flagcdn.com/md.svg"
+                alt=""
+                class="card-img img-fluid"
+              />
+              <div class="card-body p-4 fs-6">
+                <p class="country-name fs-5 fw-bold">Bangladesh</p>
+                <p class="mt-3">
+                  <span class="fw-bold">Population: </span>
+                  <span class="country-population">10000000</span>
+                </p>
+                <p class="">
+                  <span class="fw-bold">Region: </span>
+                  <span class="country-region">Asia</span>
+                </p>
+                <p class="">
+                  <span class="fw-bold">Capital: </span>
+                  <span class="country-capital">Dhaka</span>
+                </p>
+              </div>
+            </div>
+          </div> -->
+          <!-- card ends  -->
+        </div>
+        <!-- country view ends  -->
+        <!-- expand view starts  -->
+        <div class="row mt-5 hide expand-view">
+          <!-- expand view image -->
+          <div class="col-12 col-sm-6">
+            <img
+              src="https://flagcdn.com/md.svg"
+              alt=""
+              class="img-fluid expand-view-img"
+            />
+          </div>
+          <!-- expand view image -->
+          <!-- expand view body  -->
+          <div class="col-12 col-sm-6">
+            <div class="row p-4">
+              <div class="col-12">
+                <p class="country-name-expand fw-bold fs-4">Belgium</p>
+              </div>
+              <div class="col-12 mt-3">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <p class="">
+                      <span class="fw-bold">Native Name: </span>
+                      <span class="country-name-native">Belgie</span>
+                    </p>
+                    <p class="">
+                      <span class="fw-bold">Population: </span>
+                      <span class="country-population-expand">100000</span>
+                    </p>
+                    <p class="">
+                      <span class="fw-bold">Region: </span>
+                      <span class="country-region-expand">Europe</span>
+                    </p>
+                    <p class="">
+                      <span class="fw-bold">Sub Region: </span>
+                      <span class="country-subregion-expand"
+                        >Western Europe</span
+                      >
+                    </p>
+                    <p class="">
+                      <span class="fw-bold">Capital: </span>
+                      <span class="country-capital-expand">Brussels</span>
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <p class="">
+                      <span class="fw-bold">Top Level Domain: </span>
+                      <span class="tld">.be</span>
+                    </p>
+                    <p class="">
+                      <span class="fw-bold">Currencies: </span>
+                      <span class="country-currencies-expand">Euro</span>
+                    </p>
+                    <p class="">
+                      <span class="fw-bold">Languages: </span>
+                      <span class="country-languages-expand">English</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex mt-3">
+                <p>Border Countries</p>
+                <ul class="border-countries-ul d-flex">
+                  <!-- <li>France</li>
+                  <li>Germany</li>
+                  <li>Bangladesh</li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- expand view body  -->
+        </div>
+        <!-- expand view ends  -->
+      </div>
+    </main>
+    <!-- main ends  -->
+    <script src="./app.js"></script>
+    <script src="./darkMode.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
