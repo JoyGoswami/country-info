@@ -93,6 +93,7 @@ header {
 }
 .border-countries-ul {
   list-style-type: none;
+  padding: 0px;
 }
 .border-countries-ul li {
   padding: 5px 10px;
