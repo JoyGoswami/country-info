@@ -189,7 +189,7 @@ function getDetailedViewData(elements, data) {
 }
 
 function showDetailedView(data) {
-  //console.log(data);
+  console.log(data);
 
   const flag = data.flags.svg;
   document
@@ -316,6 +316,13 @@ bactBtn.addEventListener("click", () => {
 
   document.querySelector(".main-nav").classList.remove("hide");
   document.querySelector(".expand-view-nav").classList.add("hide");
+
+  // clearing border countries lis is available
+
+  if (document.querySelectorAll(".border-countries-ul li")) {
+    const borderCountriesEl = document.querySelector(".border-countries-ul");
+    borderCountriesEl.innerHTML = "";
+  }
 });
 
 // search suggestions
