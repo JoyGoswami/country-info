@@ -259,6 +259,9 @@ function getNeighbouringCountryData() {
 
   elements.forEach((element) => {
     element.addEventListener("click", () => {
+      if (elements) {
+        document.querySelector(".border-countries-ul").innerHTML = "";
+      }
       DataArr.forEach((data) => {
         if (data.cca3 === element.textContent) {
           showDetailedView(data);
