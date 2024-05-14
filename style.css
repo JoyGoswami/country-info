@@ -17,6 +17,9 @@ body.dark-mode {
   background-color: var(--dark-mode-bg);
   color: var(--dark-mode-text);
 }
+body.dark-mode .preloader {
+  background-color: var(--dark-mode-bg);
+}
 body.dark-mode header,
 body.dark-mode .dark-btn,
 body.dark-mode .search-cont,
@@ -119,6 +122,7 @@ header {
   left: 0px;
   top: 58px;
   padding: 0;
+  z-index: 99;
 }
 .suggestion-li {
   cursor: pointer;
@@ -127,6 +131,13 @@ header {
 .suggestion-li:hover {
   background-color: var(--dark-grey);
   width: 100%;
+}
+
+.preloader {
+  background-color: var(--light-mode-bg);
+}
+.preloader img {
+  width: 10%;
 }
 
 @media only screen and (max-width: 558px) {

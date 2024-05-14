@@ -5,6 +5,8 @@ let DataArr = [];
 // Elements
 const select = document.querySelector("#select-region");
 const parentElement = document.querySelector(".country-view");
+const mainEl = document.querySelector("main");
+const preLoader = document.querySelector(".preloader");
 
 // 1. get the data from api
 // 2. process the data get necessery values
@@ -13,9 +15,24 @@ const parentElement = document.querySelector(".country-view");
 
 // getting the data from api
 const getCountries = async () => {
-  let response = await fetch(URL);
-  let data = await response.json();
-  processData(data);
+  try {
+    preLoader.classList.remove("hide");
+    let response = await fetch(URL);
+
+    let data = await response.json();
+    preLoader.remove();
+
+    processData(data);
+  } catch (error) {
+    const errorCol = createElement("div", null, null, null, mainEl);
+    createElement(
+      "p",
+      ["error", "mt-5", "text-center", "fs-1"],
+      null,
+      "Failed to load data",
+      errorCol
+    );
+  }
 };
 
 // it will pass the data through forEach loop
