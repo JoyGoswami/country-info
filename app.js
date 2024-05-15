@@ -206,7 +206,7 @@ function getDetailedViewData(elements, data) {
 }
 
 function showDetailedView(data) {
-  console.log(data);
+  // console.log(data);
 
   const flag = data.flags.svg;
   document

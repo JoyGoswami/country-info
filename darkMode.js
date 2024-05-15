@@ -16,6 +16,5 @@ darkBtn.addEventListener("click", () => {
   }
 });
 body.classList.add(localStorage.getItem("mode"));
-console.log(localStorage.getItem("mode"));
 
 // body.classList.toggle(mode);
